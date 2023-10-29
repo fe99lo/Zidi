@@ -12,6 +12,14 @@ const cardsData = [
   { id: 10, color: '#FF9800' },
   { id: 11, color: '#607D8B' },
   { id: 12, color: '#607D8B' },
+  { id: 13, color: '#9C27B0' },
+  { id: 14, color: '#9C27B0' },
+  { id: 15, color: '#009688' },
+  { id: 16, color: '#009688' },
+  { id: 17, color: '#E91E63' },
+  { id: 18, color: '#E91E63' },
+  { id: 19, color: '#03A9F4' },
+  { id: 20, color: '#03A9F4' },
 ];
 
 let cards = [];
