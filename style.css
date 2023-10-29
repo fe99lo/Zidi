@@ -1,0 +1,81 @@
+body {
+  background-color: #F5F5F5;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #FFF;
+  border-radius: 5px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  perspective: 600px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card .card-front,
+.card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card .card-front {
+  background-color: #FF4081;
+}
+
+.card .card-back {
+  background-color: #3F51B5;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 500px) {
+  #cards-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card {
+    width: 50px;
+    height: 50px;
+  }
+}
